@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-curl https://openaf.io/nightly/install.sh | sh
+curl https://openaf.io/nightly/install.sh | sh &
