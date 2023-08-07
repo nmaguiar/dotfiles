@@ -5,4 +5,6 @@ echo if [ ! -e /etc/bash_completion.d/openaf-ojobio-complete ] || [ $(find /etc/
 
 if [ "$GITHUB_REPOSITORY" = "nmaguiar/test" ]; then
   /usr/bin/bash /workspaces/$(echo $GITHUB_REPOSITORY | sed 's/nmaguiar\///')/.github/bootstrap.sh
+else
+  export > /tmp/bootstrap.env
 fi
