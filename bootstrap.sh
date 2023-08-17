@@ -7,4 +7,4 @@ else
 fi
 
 curl https://openaf.io/nightly/install.sh | sh 
-sudo bash -c "echo 'if [ ! -e /etc/bash_completion.d/openaf-ojobio-complete ] || [ $(find /etc/bash_completion.d/openaf-ojobio-complete -mtime +1) ]; then ojob ojob.io/unix/ojobComplete > /etc/bash_completion.d/openaf-ojobio-complete; fi' >> /etc/bash.bashrc"
+bash -c "echo 'if [ ! -e ~/.openaf-ojobio-complete ] || [ $(find ~/.openaf-ojobio-complete -mtime +1) ]; then ojob ojob.io/unix/ojobComplete > ~/.openaf-ojobio-complete; fi' >> /etc/bash.bashrc"
