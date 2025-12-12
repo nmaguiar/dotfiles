@@ -7,7 +7,7 @@ export > /tmp/bootstrap.env
 #fi
 
 #curl https://openaf.io/nightly/install.sh | sh 
-sudo bash -c "mkdir -p /opt/oaf && curl https://openaf.io/getStatic.sh | DIST=t8 sh -s && ojob ojob.io/oaf/symlinks"
+sudo bash -c "mkdir -p /opt/oaf && curl https://openaf.io/getStatic.sh | DIST=t8 sh -s && ./ojob ojob.io/oaf/symlinks && chmod -R a+x /tmp/_oaf*"
 sudo bash -c "echo 'export PATH=/opt/oaf:\$PATH' >> /etc/bash.bashrc"
 sudo bash -c "echo 'source ~/.openaf_completion_bash.sh > /dev/null 2>&1' >> /etc/bash.bashrc"
 sudo bash -c "echo 'if [ ! -e ~/.openaf_completion_bash.sh ] || [ $(find ~/.openaf_completion_bash.sh -mtime +1) ]; then' >> /etc/bash.bashrc"
